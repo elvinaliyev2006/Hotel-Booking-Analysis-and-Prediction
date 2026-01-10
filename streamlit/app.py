@@ -17,7 +17,7 @@ def get_data():
         df[col] = df[col].replace(small_cats, 'Other')
     return df
 df=get_data()
-st.title("🏨 Hotel Booking Predictor")
+st.title("🏨 Hotel Booking Predictorahhhhhhhhhhh")
 st.write("*Please Enter Features:*")
 country_list=df['country'].unique()
 agent_list=df['agent'].unique()
