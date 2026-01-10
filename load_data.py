@@ -16,7 +16,7 @@ try:
     engine = create_engine(connection_string)
 
     print("⏳ CSV is reading...")
-    df = pd.read_csv("clean_hotel_data.csv") 
+    df = pd.read_csv("datasets/clean_hotel_data.csv")
     print(f"🚀 {len(df)} rows into the Docker database...")
     df.to_sql("hotels", con=engine, if_exists="replace", index=False)
 
