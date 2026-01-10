@@ -1,6 +1,6 @@
 # 🏨 Hotel Booking Cancellation Prediction (End-to-End Project)
 ---
-**Streamlit App:** ![Hotel Booking Predictor][https://hotel-booking-analysis-and-prediction-hbpea2024.streamlit.app/](https://hotel-booking-analysis-and-prediction-hbpea2024.streamlit.app/)
+**Streamlit App:** [Hotel Booking Predictor](https://hotel-booking-analysis-and-prediction-hbpea2024.streamlit.app/)
 ## 📌 Project Overview
 This project is an end-to-end data science solution designed to predict the likelihood of hotel booking cancellations. It integrates external **Weather API** data to enhance predictive power and features a user-friendly **Streamlit** dashboard for real-time predictions.
 
