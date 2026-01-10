@@ -3,6 +3,7 @@ import joblib
 import pandas as pd
 model = joblib.load('hotel_model.pkl')
 encoder = joblib.load('encoder.pkl')
+
 @st.cache_data
 def get_data():
     df = pd.read_csv('datasets/clean_hotel_data.csv')
@@ -12,7 +13,11 @@ def get_data():
         df[col] = df[col].replace(small_cats, 'Other')
     return df
 df=get_data()
+
 st.title("🏨 Hotel Booking Predictor")
+
+st.title("🏨 Hotel Booking Predictorahhhhhhhhhhh")
+
 st.write("*Please Enter Features:*")
 country_list=df['country'].unique()
 agent_list=df['agent'].unique()
@@ -22,6 +27,7 @@ market_segment_list=df['market_segment'].unique()
 col1 , col2 = st.columns(2)
 
 with col1:
+    s=st.selectbox('aaaaa',df.columns)
     co=st.selectbox('Select country:',country_list)
     ag=st.selectbox('Select agent:',agent_list)
     cus=st.selectbox('Select customer type:',customer_list)
