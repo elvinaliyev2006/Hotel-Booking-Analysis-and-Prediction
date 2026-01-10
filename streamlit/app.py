@@ -27,6 +27,7 @@ market_segment_list=df['market_segment'].unique()
 col1 , col2 = st.columns(2)
 
 with col1:
+    s=st.selectbox(df.columns)
     co=st.selectbox('Select country:',country_list)
     ag=st.selectbox('Select agent:',agent_list)
     cus=st.selectbox('Select customer type:',customer_list)
