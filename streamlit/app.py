@@ -17,7 +17,6 @@ def get_data():
         df[col] = df[col].replace(small_cats, 'Other')
     return df
 df=get_data()
-df = get_data_from_csv()
 st.title("🏨 Hotel Booking Predictor")
 st.write("*Please Enter Features:*")
 country_list=df['country'].unique()
