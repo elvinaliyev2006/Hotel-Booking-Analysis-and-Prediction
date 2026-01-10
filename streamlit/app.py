@@ -8,8 +8,12 @@ from dotenv import load_dotenv
 model = joblib.load('hotel_model.pkl')
 encoder = joblib.load('encoder.pkl')
 @st.cache_data
+<<<<<<< HEAD
 def get_data():
 
+=======
+def get_data_from_csv():
+>>>>>>> 049007ecee5cd4339bc76180abd605aa198ea682
     df = pd.read_csv('datasets/clean_hotel_data.csv')
 
     for col in ['market_segment', 'country', 'agent']:
@@ -18,7 +22,12 @@ def get_data():
         df[col] = df[col].replace(small_cats, 'Other')
     
     return df
+<<<<<<< HEAD
 df=get_data()
+=======
+
+df = get_data_from_csv()
+>>>>>>> 049007ecee5cd4339bc76180abd605aa198ea682
 
 st.title("🏨 Hotel Booking Predictor")
 st.write("*Please Enter Features:*")
