@@ -8,11 +8,8 @@ from dotenv import load_dotenv
 model = joblib.load('hotel_model.pkl')
 encoder = joblib.load('encoder.pkl')
 @st.cache_data
-def get_data_from_db():
-    load_dotenv()
-    engine = create_engine(f"mysql+pymysql://{os.getenv('MYSQL_USER')}:{os.getenv('MYSQL_PASSWORD')}@localhost:3306/{os.getenv('MYSQL_DATABASE')}")
-    query = "SELECT * FROM hotels"
-    df = pd.read_sql(query, con=engine)
+def get_data_from_csv():
+    df = pd.read_csv('hotels_data.csv')
 
     for col in ['market_segment', 'country', 'agent']:
         counts = df[col].value_counts()
@@ -20,7 +17,8 @@ def get_data_from_db():
         df[col] = df[col].replace(small_cats, 'Other')
     
     return df
-df=get_data_from_db()
+
+df = get_data_from_csv()
 
 st.title("🏨 Hotel Booking Predictor")
 st.write("*Please Enter Features:*")
