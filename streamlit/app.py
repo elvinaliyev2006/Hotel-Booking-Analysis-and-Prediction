@@ -9,7 +9,7 @@ model = joblib.load('hotel_model.pkl')
 encoder = joblib.load('encoder.pkl')
 @st.cache_data
 def get_data_from_csv():
-    df = pd.read_csv('datasets/hotel_final.csv')
+    df = pd.read_csv('datasets/clean_hotel_data.csv')
 
     for col in ['market_segment', 'country', 'agent']:
         counts = df[col].value_counts()
