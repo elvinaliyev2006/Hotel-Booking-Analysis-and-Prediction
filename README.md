@@ -1,23 +1,23 @@
-# 🏨 Hotel Booking Cancellation Prediction (End-to-End Project)
+#  Hotel Booking Cancellation Prediction (End-to-End Project)
 ---
 **Streamlit App:** [Hotel Booking Predictor](https://hotel-booking-analysis-and-prediction-hbpea2024.streamlit.app/)
 ## 📌 Project Overview
 This project is an end-to-end data science solution designed to predict the likelihood of hotel booking cancellations. It integrates external **Weather API** data to enhance predictive power and features a user-friendly **Streamlit** dashboard for real-time predictions.
 
-### 📊 Dataset at a Glance
+###  Dataset at a Glance
 * **Initial Data:** ~120,000 rows & 43 columns.
 * **Final Processed Data:** ~118,000 rows & 27 high-impact features.
 * **Target Variable:** `is_canceled` (Binary: 0 for stayed, 1 for canceled).
 
 ---
 
-## 🔄 Project Workflow
+##  Project Workflow
 The following animation illustrates the technical flow from data acquisition via API to model deployment:
 
 ![Project Workflow](workflowdiagram_animation.gif)
 ---
 
-## 🔍 EDA: Key Insights (Q&A)
+##  EDA: Key Insights (Q&A)
 During the analysis, I extracted several critical findings from the data:
 
 * **Q: Does weather (temp, rain, snow) directly cause cancellations?**
@@ -39,14 +39,14 @@ To optimize the model, I performed:
 
 ---
 
-## 🤖 Machine Learning & Performance
+##  Machine Learning & Performance
 
 I utilized a **Random Forest Classifier** to build the predictive model. The training process included:
 * **Data Split:** **75% Train** / **25% Test** split.
 * **Categorical Handling:** All categorical nominal features were transformed using **One-Hot Encoding**.
 * **Validation:** A **5-fold Cross-Validation** was performed to ensure the model generalizes well and to check for potential overfitting.
 
-### 📈 Evaluation Metrics
+###  Evaluation Metrics
 | Metric | Training Score | Testing Score |
 | :--- | :--- | :--- |
 | **Accuracy** | 0.894 | **0.863** |
@@ -58,7 +58,7 @@ I utilized a **Random Forest Classifier** to build the predictive model. The tra
 
 ---
 
-## 💻 Streamlit App & Prediction
+##  Streamlit App & Prediction
 The final model is integrated into a Streamlit interface to provide an interactive experience:
 
 * **Feature Importance:** Users can visually see which factors most significantly influence the model's decision-making process.
