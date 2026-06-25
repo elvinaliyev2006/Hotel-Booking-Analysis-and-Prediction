@@ -5,7 +5,6 @@ scikit-learn
 matplotlib
 seaborn
 joblib
-plotly
 nbformat
 sqlalchemy
 pymysql
